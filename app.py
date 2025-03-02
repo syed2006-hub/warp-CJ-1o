@@ -164,7 +164,7 @@ def upload_image():
         # Generate AI Response
         model = genai.GenerativeModel("gemini-1.5-flash-latest")
         response = model.generate_content([
-            "Describe this image in semi detail and just say Ask for further information about the uploaded image.",
+            "Describe this image in detail and just say Ask for further information about the uploaded image but in case of any question papers or like quiz give exact answers for that.",
             {
                 "mime_type": "image/png",  # Adjust based on actual file type
                 "data": img_data
